@@ -106,6 +106,16 @@ class java::params {
         }
       }
     }
+    'Windows':{
+      $java = {
+        Package { provider => chocolatey }
+        'jdk' => { 'package' => 'java.jdk',
+         },
+        'jre' => { 'package' => 'javaruntime', },
+      }
+
+      }
+    }
     'Solaris': {
       $java = {
         'jdk' => { 'package' => 'developer/java/jdk-7', },
